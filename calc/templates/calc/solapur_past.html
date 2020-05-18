@@ -1,0 +1,7 @@
+{% include 'calc/base.html' %}
+{% block content %}
+{% endblock %}
+{% for sol in solas %}
+    <h3>{{sol.event}}</h3>
+    <a href="{{sol.video_url}}">Click here to see {{sol.event}} videos.</a>
+{% endfor %}

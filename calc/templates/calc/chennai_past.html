@@ -1,0 +1,7 @@
+{% include 'calc/base.html' %}
+{% block content %}
+{% endblock %}
+{% for chenn in chennais %}
+    <h3>{{chenn.event}}</h3>
+    <a href="{{chenn.video_url}}">Click here to see {{chenn.event}} videos.</a>
+{% endfor %}

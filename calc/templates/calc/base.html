@@ -1,0 +1,56 @@
+{% block content %}
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Dropdown Structure -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+<!-- Dropdown Trigger -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+  });
+</script>
+
+<nav class="blue">
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Weby</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="home">Home</a></li>
+
+      <li><a href="register">Become a Member</a></li>
+
+      <!-- Dropdown Trigger -->
+
+
+    </ul>
+
+  </div>
+</nav>
+<br>
+<div class="container">
+    <nav class="blue">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="">Member List</a></li>
+            <li><a href="">Past Events</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+   </nav>
+   <br>
+   <a onclick="M.toast({html:'Fetch the learning water for free'})" class="btn">Theme of the year!</a>
+
+
+
+</div>
+
+{% endblock %}

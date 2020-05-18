@@ -1,0 +1,44 @@
+<style>
+   .right{
+   float:left;
+   }
+</style>
+{% include 'calc/base.html' %}
+{% block content %}
+{% endblock %}
+<br>
+<div class="container">
+    <div class="right">
+        <h6>Enter Chennai or Solapur below.
+        That city's corresponding page will be displayed.
+        The current page is Chennai's page</h6>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="city" placeholder="Enter the city">
+            <input type="submit" class="btn" value="Show">
+        </form>
+    </div>
+
+
+    {% for sola in solapur %}
+        <a href="solapur_past"><button class="btn">Past event videos</button></a>
+        <h1>{{sola.event}}</h1>
+        <img src="{{sola.image1.url}}" width="200 px" height="200 px">
+        <img src="hf" alt="">
+        <img src="{{sola.image2.url}}" width="200 px" height="200 px">
+        <img src="hf" alt="">
+        <img src="{{sola.image3.url}}" width="200 px" height="200 px"><br>
+        <a href="{{sola.video_url}}">Click here to view this event video</a>
+
+
+
+    {% endfor %}
+
+</div>
+{% if messages %}
+    {% for message in messages %}
+        <script>
+            M.toast({html: '{{message}}'},classes:'blue rounded',displayLength:2000)
+        </script>
+    {% endfor %}
+{% endif %}
